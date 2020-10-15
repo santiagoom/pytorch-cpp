@@ -1,0 +1,40 @@
+
+
+
+
+
+mkdir build
+cd build
+cmake -DCMAKE_PREFIX_PATH=/absolute/path/to/libtorch ..
+cmake --build . --config Release
+
+
+D:\lib\libtorch-win-shared-with-deps-debug-1.6.0+cu101\libtorch
+
+
+
+CMake settings
+
+toolchains amd64
+
+CMake opitions
+
+-DCMAKE_PREFIX_PATH=D:\\lib\\libtorch-win-shared-with-deps-debug-1.6.0+cu101\\libtorch
+libtorch-win-shared-with-deps-debug-1.6.0+cpu
+libtorch-win-shared-with-deps-1.6.0+cu101
+
+
+bugs
+vcruntime140_1.dll丢失的解决方法
+vcruntime140_1D.dll丢失的解决方法
+https://www.dll-files.com/download/868fd5f1ab2d50204c6b046fe172d4b8/vcruntime140_1d.dll.html?c=QVhzbkdwT0k2SDMyVG0zYkk0NDVjQT09
+
+
+运行vs时提示“由于找不到vcruntime 140_1D.dll…无法运行巴拉巴拉的”（理论上来讲当运行其他软件程序也提示这个错误时也可以类似解决）：
+解决办法：登录网站https://www.dll-files.com/，在其中搜索缺少的这个dll并下载，得到包含该文件的压缩包，将该文件复制到C:\Windows\System32目录下即可
+
+
+
+
+
+
