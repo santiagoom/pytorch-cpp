@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 project(example-app)
 
+#-DCMAKE_PREFIX_PATH=D:\\lib\\libtorch-win-shared-with-deps-1.6.0+cu101\\libtorch
+#D:\\lib\\libtorch-win-shared-with-deps-debug-1.6.0+cu101\\libtorch
+set (BOOST_ROOT "D:\\lib\\libtorch-win-shared-with-deps-debug-1.6.0+cu101\\libtorch")
+set (Boost_LIBRARY_DIR "D:\\lib\\libtorch-win-shared-with-deps-debug-1.6.0+cu101\\libtorch\\lib")
+
+list(APPEND CMAKE_PREFIX_PATH "D:\\lib\\libtorch-win-shared-with-deps-debug-1.6.0+cu101\\libtorch")
+
 find_package(Torch REQUIRED)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 
